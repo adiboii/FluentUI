@@ -39,6 +39,7 @@
 
 
             <!--Accent colors-->
+          
             <Color x:Key="YellowDark">#d29200</Color>
             <Color x:Key="Yellow">#ffb900</Color>
             <Color x:Key="YellowLight">#fff100</Color>
@@ -63,16 +64,52 @@
             <Color x:Key="GreenDark">#004b1c</Color>
             <Color x:Key="Green">#107c10</Color>
             <Color x:Key="GreenLight">#bad80a</Color>
-
+      
 
 
             <!-- App Bars -->
-            <!-- Bottom Navigation -->
+            <ControlTemplate x:Key="AppBarTemplate">
+                <FlexLayout
+                    Orientation="Horizontal"
+                    Padding="16, 12"
+                    VerticalOptions="Start"
+                    BackgroundColor="{StaticResource ThemePrimary}"
+                >
+                    <Frame
+                        Style="{StaticResource ProfilePictureM}"
+                    >
+                        <FlexLayout></FlexLayout>
+                            Spacing="20"
+                            BackgroundColor="AliceBlue">
+                            <Image 
+                                Source="profile.png"
+                            />
+                            <Label
+                                Text="Hello, World!"
+                                TextColor="White"
+                            />
+"                            <Image
+                                    Source="profile.png"
+                            />
+                            <Image
+                                    Source="profile.png"
+                            />
+                            <Image
+                                    Source="profile.png"
+                            />
+                            <Image
+                                    Source="profile.png"
+                            />  
+                    </Frame>
+                </FlexLayout>
+            </ControlTemplate>
+                <!-- Bottom Navigation -->
 
             <!-- Buttons -->
             <!-- Resources Used -->
             <!-- https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/button -->
 
+            <!-- Light Mode -->
             <!-- Primary Button -->
             <Style x:Key="PrimaryButton" TargetType="Button">
                 <Setter Property="TextColor" Value="{StaticResource White}"/>
@@ -88,6 +125,7 @@
                 <!-- The properties are changed to align the button's text at the center -->
                 <Setter Property="WidthRequest" Value="94"/>
                 <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="Text" Value="Default"/>
             </Style>
 
             <!-- Text Button -->
@@ -105,11 +143,52 @@
                 <!-- The properties are changed to align the button's text at the center -->
                 <Setter Property="WidthRequest" Value="94"/>
                 <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="Text" Value="Default"/>
+            </Style>
+
+            <!-- Dark Mode -->
+            <!-- Primary Button -->
+            <Style x:Key="DMPrimaryButton" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource Black}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ThemePrimary}"/>
+                <!-- Font Family -->
+                <!-- Font Size -->
+                <!-- Font Attributes -->
+                <Setter Property="CornerRadius" Value="2"/>
+                <!-- Character Spacing -->
+                <Setter Property="TextTransform" Value="Uppercase"/>
+
+                <!-- The WidthRequest and HeightRequest properties are not identical with the Figma design -->
+                <!-- The properties are changed to align the button's text at the center -->
+                <Setter Property="WidthRequest" Value="94"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="Text" Value="Default"/>
+            </Style>
+
+            <!-- Text Button -->
+            <Style x:Key="DMTextButton" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource ThemePrimary}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource Black}"/>
+                <!-- Font Family -->
+                <!-- Font Size -->
+                <!-- Font Attributes -->
+                <Setter Property="CornerRadius" Value="2"/>
+                <!-- Character Spacing -->
+                <Setter Property="TextTransform" Value="Uppercase"/>
+
+                <!-- The WidthRequest and HeightRequest properties are not identical with the Figma design -->
+                <!-- The properties are changed to align the button's text at the center -->
+                <Setter Property="WidthRequest" Value="94"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="Text" Value="Default"/>
             </Style>
 
             <!-- [assembly: ExportFont("File Name with Extension"), Alias = "Font Name)] -->
 
             <!-- Chips -->
+            
+            
+            
             <!-- Controls -->
 
             <!--Toggle/Switch-->
@@ -134,33 +213,254 @@
             </Style>
 
             <!--Checkbox-->
-            <!--<Style x:Key="PrimaryCheckbox" TargetType="CheckBox">
+            <Style x:Key="PrimaryCheckBox" TargetType="CheckBox">
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="On">
+                            <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource ThemePrimary}"/>
+                                    <Setter Property="Color" Value="{StaticResource NeutralTertiaryAlt}"/>
                                 </VisualState.Setters>
                             </VisualState>
-                            <VisualState x:Name="Off">
+                            <VisualState x:Name="IsChecked">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="White"/>
+                                    <Setter Property="Color" Value="{StaticResource ThemePrimary}"/>
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
                     </VisualStateGroupList>
                 </Setter>
-            </Style>-->
+            </Style>
 
+
+
+            <!--RadioButton-->
+            <ControlTemplate x:Key="RadioButtonTemplate">
+                <Frame BorderColor="Transparent"
+                   BackgroundColor="Transparent"
+                   HasShadow="False"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"
+                   Padding="0">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CheckedStates">
+                                <VisualState x:Name="Checked">
+                                    <VisualState.Setters>
+                                        <Setter Property="BorderColor"
+                                            Value="#FF3300" />
+                                        <!--<Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="1" />-->
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor"
+                                            Value="#F3F2F1" />
+                                        <Setter Property="BorderColor"
+                                            Value="#F3F2F1" />
+                                        <!--<Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="0" />-->
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                    <Grid Margin="0"
+                      WidthRequest="100">
+                        <Grid WidthRequest="18"
+                          HeightRequest="18"
+                          HorizontalOptions="Center"
+                          VerticalOptions="Center">
+                            <Ellipse Stroke="#0078d4"
+                                 Fill="White"
+                                 WidthRequest="16"
+                                 HeightRequest="16"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center" />
+                            <Ellipse x:Name="check"
+                                 Fill="#0078d4"
+                                 WidthRequest="8"
+                                 HeightRequest="8"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center" />
+                        </Grid>
+                        <ContentPresenter />
+                    </Grid>
+                </Frame>
+            </ControlTemplate>
+
+            <Style TargetType="RadioButton">
+                <Setter Property="ControlTemplate"
+                    Value="{StaticResource RadioButtonTemplate}" />
+            </Style>
+            
             <!-- List -->
+
+            <!-- Single-Line -->
+            <!-- Standard -->
+            
+
             <!-- Menus -->
-            <!-- Personas -->
+
+            <!-- Profile Picture -->
+
+            <!-- X-Small -->
+            <Style x:Key="ProfilePictureXS" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="HeightRequest" Value="20"/>
+                <Setter Property="WidthRequest" Value="20"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="IsClippedToBounds" Value="True"/>
+            </Style>
+
+            <!-- Small -->
+            <Style x:Key="ProfilePictureS" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="HeightRequest" Value="24"/>
+                <Setter Property="WidthRequest" Value="24"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="IsClippedToBounds" Value="True"/>
+            </Style>
+
+            <!-- Medium -->
+            <Style x:Key="ProfilePictureM" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="HeightRequest" Value="32"/>
+                <Setter Property="WidthRequest" Value="32"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="IsClippedToBounds" Value="True"/>
+            </Style>
+
+            <!-- Large -->
+            <Style x:Key="ProfilePictureL" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="WidthRequest" Value="40"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="IsClippedToBounds" Value="True"/>
+            </Style>
+
+            <!-- X-Large -->
+            <Style x:Key="ProfilePictureXL" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="HeightRequest" Value="52"/>
+                <Setter Property="WidthRequest" Value="52"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="IsClippedToBounds" Value="True"/>
+            </Style>
+
+            <!-- XX-Large -->
+
+            <Style x:Key="ProfilePictureXXL" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="HeightRequest" Value="64"/>
+                <Setter Property="WidthRequest" Value="64"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="IsClippedToBounds" Value="True"/>
+            </Style>
+
+            <!-- Initials -->
+
+            <!-- X-Small -->
+            <Style x:Key="InitialsXS" TargetType="Frame"> 
+                <Setter Property="CornerRadius" Value="100"/> 
+                <Setter Property="HeightRequest" Value="20"/> 
+                <Setter Property="WidthRequest" Value="20"/> 
+                <Setter Property="HorizontalOptions" Value="Center"/> 
+                <Setter Property="Padding" Value="0"/> 
+                <Setter Property="IsClippedToBounds" Value="True"/> 
+                <Setter Property="BackgroundColor" Value="{StaticResource ThemePrimary}"/>
+            </Style> 
+
+            
+            <!-- Small -->
+            
+            <Style x:Key="InitialsS" TargetType="Frame"> 
+                <Setter Property="CornerRadius" Value="100"/> 
+                <Setter Property="HeightRequest" Value="24"/> 
+                <Setter Property="WidthRequest" Value="24"/> 
+                <Setter Property="HorizontalOptions" Value="Center"/> 
+                <Setter Property="Padding" Value="0"/> 
+                <Setter Property="IsClippedToBounds" Value="True"/> 
+                <Setter Property="BackgroundColor" Value="{StaticResource ThemePrimary}"/>
+            </Style> 
+ 
+           
+            <!-- Medium -->
+        
+            <Style x:Key="InitialsM" TargetType="Frame"> 
+                <Setter Property="CornerRadius" Value="100"/> 
+                <Setter Property="HeightRequest" Value="32"/> 
+                <Setter Property="WidthRequest" Value="32"/> 
+                <Setter Property="HorizontalOptions" Value="Center"/> 
+                <Setter Property="Padding" Value="0"/> 
+                <Setter Property="IsClippedToBounds" Value="True"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ThemePrimary}"/>
+            </Style> 
+
+         
+            <!-- Large -->
+      
+            <Style x:Key="InitialsL" TargetType="Frame"> 
+                <Setter Property="CornerRadius" Value="100"/> 
+                <Setter Property="HeightRequest" Value="40"/> 
+                <Setter Property="WidthRequest" Value="40"/> 
+                <Setter Property="HorizontalOptions" Value="Center"/> 
+                <Setter Property="Padding" Value="0"/> 
+                <Setter Property="IsClippedToBounds" Value="True"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ThemePrimary}"/> 
+            </Style> 
+
+      
+            <!-- X-Large -->
+          
+            <Style x:Key="InitialsXL" TargetType="Frame"> 
+                <Setter Property="CornerRadius" Value="100"/> 
+                <Setter Property="HeightRequest" Value="52"/> 
+                <Setter Property="WidthRequest" Value="52"/> 
+                <Setter Property="HorizontalOptions" Value="Center"/> 
+                <Setter Property="Padding" Value="0"/> 
+                <Setter Property="IsClippedToBounds" Value="True"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ThemePrimary}"/>   
+            </Style> 
+
+          
+            <!-- XX-Large -->
+
+            <Style x:Key="InitialsXXL" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="HeightRequest" Value="64"/>
+                <Setter Property="WidthRequest" Value="64"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="IsClippedToBounds" Value="True"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ThemePrimary}"/>
+            </Style>
+
             <!-- Pickers -->
             <!-- Progress Indicators -->
             <!-- Sheets -->
             <!-- Snackbars -->
             <!-- Tools -->
+            
+            <!--Separator-->
+            <Style x:Key="Separator" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="1"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="Color" Value="{StaticResource NeutralSecondary}"/>
+                <Setter Property="Margin" Value="0, 5, 0, 5"/>
+                <Setter Property="Opacity" Value="0.5"/>
+            </Style>
+
             <!-- Tooltips -->
         </ResourceDictionary>
     </Application.Resources>
