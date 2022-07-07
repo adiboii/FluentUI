@@ -1,14 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FluentUI.MainPage"
-             ControlTemplate="{StaticResource AppBarTemplate}">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:components="clr-namespace:FluentUI.Components"
+             x:Class="FluentUI.MainPage">
 
     <StackLayout
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+
+        
+        <Label 
+            Text="Components"
+            FontSize="24"
+            FontAttributes="Bold"
             HorizontalOptions="Center"
-            VerticalOptions="Center">
+            VerticalOptions="Center"/>
+        
+        <components:Toggle
+            VerticalOptions="Center"
+            HorizontalOptions="Center"/>
 
+        <Switch/>
+        <components:Separator/>
+        
+        <components:CheckBox
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>
 
+        <components:Button 
+            Text="Click Me"/>
+
+        <Button
+            Text="hello"/>
+
+        <Entry
+            Placeholder="Hello"
+            />
+        <components:Initials
+            FrameHeight="50"
+            FrameWidth="50"
+            UserInitials="AA"/>
+
+        <components:ProfilePicture
+            FrameHeight="50"
+            FrameWidth="50"
+            ImageSource="profile.png"/>
+        
     </StackLayout>
 
 </ContentPage>

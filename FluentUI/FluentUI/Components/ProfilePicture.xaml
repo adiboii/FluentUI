@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FluentUI.Components.ProfilePicture"
+             x:Name="this">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ProfilePicture" TargetType="Frame">
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="IsClippedToBounds" Value="True"/>
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <Frame 
+        BindingContext="{x:Reference this}"
+        Style="{StaticResource ProfilePicture}"
+        WidthRequest="{Binding FrameWidth}"
+        HeightRequest="{Binding FrameHeight}">
+
+        <Image
+            Source="{Binding ImageSource}"/>
+
+    </Frame>
+
+
+</ContentView>

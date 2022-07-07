@@ -68,9 +68,9 @@
 
 
             <!-- App Bars -->
-            <ControlTemplate x:Key="AppBarTemplate">
+            <!--<ControlTemplate x:Key="AppBarTemplate">
                 <FlexLayout
-                    Orientation="Horizontal"
+         
                     Padding="16, 12"
                     VerticalOptions="Start"
                     BackgroundColor="{StaticResource ThemePrimary}"
@@ -78,8 +78,8 @@
                     <Frame
                         Style="{StaticResource ProfilePictureM}"
                     >
-                        <FlexLayout></FlexLayout>
-                            Spacing="20"
+                        <FlexLayout
+               
                             BackgroundColor="AliceBlue">
                             <Image 
                                 Source="profile.png"
@@ -99,10 +99,11 @@
                             />
                             <Image
                                     Source="profile.png"
-                            />  
+                            />
+                        </FlexLayout>
                     </Frame>
                 </FlexLayout>
-            </ControlTemplate>
+            </ControlTemplate>-->
                 <!-- Bottom Navigation -->
 
             <!-- Buttons -->
@@ -212,25 +213,7 @@
                 </Setter>
             </Style>
 
-            <!--Checkbox-->
-            <Style x:Key="PrimaryCheckBox" TargetType="CheckBox">
-                <Setter Property="VisualStateManager.VisualStateGroups">
-                    <VisualStateGroupList>
-                        <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="Normal">
-                                <VisualState.Setters>
-                                    <Setter Property="Color" Value="{StaticResource NeutralTertiaryAlt}"/>
-                                </VisualState.Setters>
-                            </VisualState>
-                            <VisualState x:Name="IsChecked">
-                                <VisualState.Setters>
-                                    <Setter Property="Color" Value="{StaticResource ThemePrimary}"/>
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateGroupList>
-                </Setter>
-            </Style>
+  
 
 
 
@@ -453,15 +436,12 @@
             <!-- Tools -->
             
             <!--Separator-->
-            <Style x:Key="Separator" TargetType="BoxView">
-                <Setter Property="HeightRequest" Value="1"/>
-                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
-                <Setter Property="Color" Value="{StaticResource NeutralSecondary}"/>
-                <Setter Property="Margin" Value="0, 5, 0, 5"/>
-                <Setter Property="Opacity" Value="0.5"/>
-            </Style>
-
+       
             <!-- Tooltips -->
+            
+            <!--textbox-->
+            <!--datetime-->
+            <!--dropdown-->
         </ResourceDictionary>
     </Application.Resources>
 
