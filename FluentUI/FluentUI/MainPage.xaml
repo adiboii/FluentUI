@@ -4,48 +4,48 @@
              xmlns:components="clr-namespace:FluentUI.Components"
              x:Class="FluentUI.MainPage">
 
-    <StackLayout
-        HorizontalOptions="Center"
-        VerticalOptions="Center">
 
-        
-        <Label 
-            Text="Components"
-            FontSize="24"
-            FontAttributes="Bold"
+    <ScrollView>
+        <StackLayout
             HorizontalOptions="Center"
-            VerticalOptions="Center"/>
-        
-        <components:Toggle
-            VerticalOptions="Center"
-            HorizontalOptions="Center"/>
+            VerticalOptions="Start"
+            Padding="25, 0">
 
-        <Switch/>
-        <components:Separator/>
-        
-        <components:CheckBox
-            HorizontalOptions="Center"
-            VerticalOptions="Center"/>
+            <Label Text="Pages"
+                    FontAttributes="Bold"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                  />
+            <components:FluentPrimaryButton
+                x:Name="ButtonPage"
+                Text="Buttons"
+                Clicked="ButtonPage_Clicked"
+                />
 
-        <components:Button 
-            Text="Click Me"/>
+            <components:FluentPrimaryButton
+                x:Name="Profile"
+                Text="Profile Pictures"
+                Clicked="Profile_Clicked"
+                />
 
-        <Button
-            Text="hello"/>
+            <components:FluentPrimaryButton
+                x:Name="Initials"
+                Text="Initials"
+                Clicked="Initials_Clicked"
+                />
 
-        <Entry
-            Placeholder="Hello"
-            />
-        <components:Initials
-            FrameHeight="50"
-            FrameWidth="50"
-            UserInitials="AA"/>
+            <components:FluentPrimaryButton
+                x:Name="Controls"
+                Text="Controls"
+                Clicked="Controls_Clicked"
+                />
 
-        <components:ProfilePicture
-            FrameHeight="50"
-            FrameWidth="50"
-            ImageSource="profile.png"/>
-        
-    </StackLayout>
+            <components:FluentPrimaryButton
+                x:Name="Entry"
+                Text="Entry"
+                Clicked="Entry_Clicked"/>
 
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

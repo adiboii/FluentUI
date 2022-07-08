@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:components="clr-namespace:FluentUI.Components"
+             x:Class="FluentUI.Pages.Initials">
+    <ContentPage.Content>
+        <StackLayout
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            Padding="0, 20"
+            Spacing="20">
+            <Label Text="Initials Components"
+                    FontAttributes="Bold"
+                   FontSize="20"
+                  />
+            <components:FluentInitials
+                FrameSize="XS"
+                Name="John Doe"
+                />
+            <components:FluentInitials
+                FrameSize="S"
+                Name="Mel Jefferson Gabutan"
+                />
+            <components:FluentInitials
+                FrameSize="M"
+                Name="Adrian Paul Reyes"
+                />
+            <components:FluentInitials
+                FrameSize="M"
+                Name="Adrian Paul Reyes Jr."
+                />
+            <components:FluentInitials
+                FrameSize="M"
+                Name="Reyes, Adrian Paul Jr."
+                />
+            <components:FluentInitials
+                FrameSize="M"
+                Name="Reyes, Adrian Paul XIV"
+                />
+            <components:FluentInitials
+                FrameSize="XXL"
+                Name="Adrian Paul Reyes LXI"
+                />
+            <components:FluentInitials
+                FrameSize="L"
+                Name="Reyes, Adrian Paul"
+                />
+            <components:FluentInitials
+                FrameSize="XL"
+                Name="Francisco S. Abayon"
+                />
+            <components:FluentInitials
+                FrameSize="XXL"
+                Name="Jesryl Plarisan"
+                />
+
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

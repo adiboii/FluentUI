@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:components="clr-namespace:FluentUI.Components"
+             x:Class="FluentUI.Pages.ControlsPage">
+    <ContentPage.Content>
+        <StackLayout
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            Padding="0, 20"
+            Spacing="20">
+
+            <Label Text="Controls Components"
+                    FontAttributes="Bold"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            <components:Toggle
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+            <components:CheckBox
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            
+            
+            <components:Separator
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
