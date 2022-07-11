@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace FluentUI.Pages
+namespace FluentUI.Components
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ProfilePage : ContentPage
+    public partial class TestRadioButton : ContentView
     {
-        public ProfilePage()
+        public TestRadioButton()
         {
-            InitializeComponent();
+           // InitializeComponents();
         }
     }
 }

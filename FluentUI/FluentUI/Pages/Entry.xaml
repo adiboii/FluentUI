@@ -33,9 +33,45 @@
                     />
             </Frame>
 
+            <components:TextBox
+                    Margin="0"
+                    Placeholder="Search"
+                    TextColor="Black"
+                    FontSize="14"
+                    WidthRequest="300"
+                    ClearButtonVisibility="WhileEditing"
+                    />
+
+            <Frame
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="{StaticResource ThemeDark}"
+                CornerRadius="2"
+                Padding="5, 0"
+                Margin="0">
+                <components:TextBox
+                    Margin="0"
+                    Placeholder="Hello"
+                    PlaceholderColor="White"
+                    TextColor="White"
+                    FontSize="14"
+                    WidthRequest="300"
+                    ClearButtonVisibility="WhileEditing"
+                    />
+            </Frame>
+
             <!--Framed (frame properties)-->
             <components:FluentTextBox 
             PlaceHolder="Where do you want to go?"/>
+
+            
+           
+            <components:FluentTextBox 
+                PlaceHolder="Where do you want to go?"
+                PlaceholderColor="White"
+                TextColor="White"
+                BackgroundColor="{StaticResource ThemeDark}"/>
+            
 
         </StackLayout>
     </ContentPage.Content>

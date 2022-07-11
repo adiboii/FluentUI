@@ -10,40 +10,44 @@
             HorizontalOptions="Center"
             VerticalOptions="Start"
             Padding="25, 0">
-
+                
+            
+            
             <Label Text="Pages"
                     FontAttributes="Bold"
                    FontSize="20"
-                   HorizontalOptions="Center"
-                  />
+                   HorizontalOptions="Center"/>
+            
             <components:FluentPrimaryButton
                 x:Name="ButtonPage"
                 Text="Buttons"
-                Clicked="ButtonPage_Clicked"
-                />
+                Clicked="ButtonPage_Clicked"/>
+
 
             <components:FluentPrimaryButton
-                x:Name="Profile"
-                Text="Profile Pictures"
-                Clicked="Profile_Clicked"
-                />
-
-            <components:FluentPrimaryButton
-                x:Name="Initials"
+                x:Name="Persona"
                 Text="Initials"
-                Clicked="Initials_Clicked"
-                />
+                Clicked="Persona_Clicked"/>
 
             <components:FluentPrimaryButton
                 x:Name="Controls"
                 Text="Controls"
-                Clicked="Controls_Clicked"
-                />
+                Clicked="Controls_Clicked"/>
 
             <components:FluentPrimaryButton
                 x:Name="Entry"
                 Text="Entry"
                 Clicked="Entry_Clicked"/>
+
+            <components:FluentPrimaryButton
+                x:Name="AppBar"
+                Text="AppBar"
+                Clicked="AppBar_Clicked"/>
+
+            <components:FluentPrimaryButton
+                x:Name="Chips"
+                Text="Chips"
+                Clicked="Chips_Clicked"/>
 
 
         </StackLayout>

@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
+
 namespace FluentUI.Components
 {
-    public class FluentRadioButton : RadioButton
+    internal class FluentList : ListView
     {
-
+        
     }
 }

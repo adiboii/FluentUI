@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:components="clr-namespace:FluentUI.Components"
+             x:Class="FluentUI.Pages.ChipsPage">
+    <ContentPage.Content>
+
+        <StackLayout
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            Padding="0, 20"
+            Spacing="20">
+            <Label Text="Chips Components"
+                    FontAttributes="Bold"
+                   FontSize="20"
+                  />
+
+
+            <components:FluentChips
+                Source="profile.png"
+                BackgroundColor="{StaticResource NeutralLight}"
+                Label="Default"
+                WidthRequest="100"/>
+
+            <components:FluentChips
+                Source="persona.png"
+                BackgroundColor="{StaticResource NeutralLight}"
+                Label="Pressed"
+                WidthRequest="100"/>
+
+            <components:FluentChips
+                Source="persona.png"
+                BackgroundColor="{StaticResource NeutralLight}"
+                Label="Disabled"
+                IsEnabled="False"
+                WidthRequest="100"/>
+
+            <components:FluentChips
+                Source="dismiss.png"
+                BackgroundColor="{StaticResource ThemePrimary}"
+                Label="Focused"
+                TextColor="White"
+                WidthRequest="100"/>
+
+            <components:FluentChips
+                Source="persona.png"
+                BackgroundColor="#FFEBEB"
+                Label="Error"
+                WidthRequest="100"/>
+            
+            <components:FluentChips
+                Source="dismiss.png"
+                BackgroundColor="#D92C2C"
+                Label="Error Focused"
+                TextColor="White"/>
+           
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

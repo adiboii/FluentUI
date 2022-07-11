@@ -21,24 +21,29 @@ namespace FluentUI
             Navigation.PushAsync(new ButtonPage());
         }
 
-        private void Initials_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new Initials());
-        }
-
         private void Controls_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ControlsPage());
         }
 
-        private void Profile_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new ProfilePage());
-        }
-
         private void Entry_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new EntryForms());
+        }
+
+        private void AppBar_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AppBarPage());
+        }
+
+        private void Chips_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ChipsPage());
+        }
+
+        private void Persona_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Persona());
         }
     }
 }

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace FluentUI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Initials : ContentPage
+    public partial class ChipsPage : ContentPage
     {
-        public Initials()
+        public ChipsPage()
         {
             InitializeComponent();
         }

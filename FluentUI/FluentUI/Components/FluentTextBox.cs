@@ -27,41 +27,52 @@ namespace FluentUI.Components
             set { SetValue(FluentTextBox.hasIcon, value); }
         }
 
+        public static readonly BindableProperty textColor = BindableProperty.Create(
+         "TextColor", typeof(Color), typeof(FluentTextBox), Color.Black);
+
+        public Color TextColor
+        {
+            get { return (Color)GetValue(FluentTextBox.textColor); }    
+            set { SetValue(FluentTextBox.textColor, value); }
+        }
+
+        public static readonly BindableProperty placeholderColor = BindableProperty.Create(
+        "PlaceholderColor", typeof(Color), typeof(FluentTextBox), Color.Black);
+
+        public Color PlaceholderColor
+        {
+            get { return (Color)GetValue(FluentTextBox.textColor); }
+            set { SetValue(FluentTextBox.textColor, value); }
+        }
+
         public FluentTextBox()
         {
             BackgroundColor = colors.NeutralLight;
             Padding = new Thickness(10, 0);
             Margin = new Thickness(0);
 
-            Grid grid = new Grid();
             StackLayout stack = new StackLayout();
             stack.Spacing = 5;
             stack.Orientation = StackOrientation.Horizontal;
 
-            Content = stack;
-            grid.ColumnDefinitions.Add(new ColumnDefinition());
-            grid.ColumnDefinitions.Add(new ColumnDefinition());
-
             TextBox textbox = new TextBox()
             {
                 Placeholder = PlaceHolder,
+                PlaceholderColor = PlaceholderColor,
                 FontSize = 14,
-                TextColor = colors.NeutralDark,
+                TextColor = TextColor,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
             };
 
             //image to add later
-            Label l = new Label();
-            l.Text = "O";
+            Label l = new Label();  
+            l.Text = "A";
             l.VerticalOptions = LayoutOptions.Center;
             l.HorizontalOptions = LayoutOptions.Center;
             stack.Children.Add(l);
             stack.Children.Add(textbox);
+            Content = stack;
         }
-
-
-
-
     }
 }

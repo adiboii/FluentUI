@@ -23,11 +23,33 @@
             <components:CheckBox
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
-            
-            
+
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                
+                <components:FluentRadioButton/>
+                <components:FluentRadioButton/>
+                <components:FluentRadioButton/>
+
+            </StackLayout>
+
             <components:Separator
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
+
+            <components:Separator
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                WidthRequest="200"/>
+             
+            <components:Separator
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                WidthRequest="350"/>
+
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
